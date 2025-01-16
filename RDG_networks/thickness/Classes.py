@@ -95,7 +95,7 @@ class Polygon:
         vertices (List[Tuple[float, float]]): A list of (x, y) coordinates representing the vertices of the polygon.
     """
 
-    def __init__(self, vertices: List[tuple], middle_segment=None):
+    def __init__(self, vertices: List[tuple], middle_segment=None, neighbors=None):
         """
         Initializes a Polygon instance with the provided vertices.
 
@@ -104,6 +104,7 @@ class Polygon:
         """
         self.vertices = vertices
         self.middle_segment = middle_segment
+        self.neighbors = neighbors
 
     def area(self) -> float:
         """

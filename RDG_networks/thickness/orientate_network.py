@@ -170,7 +170,7 @@ def rotate_network(
         middle_segment_new = LineSegment(start=start, end=end)
         
         # Store the rotated segment in the new dictionary
-        segment_thickness_dict_new[id] = Polygon(vertices=vertices_new, middle_segment=middle_segment_new)
+        segment_thickness_dict_new[id] = Polygon(vertices=vertices_new, middle_segment=middle_segment_new, neighbors=segment.neighbors)
 
     return segment_thickness_dict_new
 
@@ -237,7 +237,7 @@ def clip_network(
                 middle_segment_new = LineSegment(start=start, end=end)
 
             # Create a new clipped polygon with updated vertices and middle segment
-            pol_new = Polygon(vertices=vertices_new, middle_segment=middle_segment_new)
+            pol_new = Polygon(vertices=vertices_new, middle_segment=middle_segment_new, neighbors=segment.neighbors)
             pol_new.sort_vertices()  # Ensure vertices are sorted
             segment_thickness_dict_new[id] = pol_new
 
@@ -285,7 +285,7 @@ def translate_network(
             middle_segment_new = LineSegment(start=start, end=end)
         
         # Store the translated segment in the new dictionary
-        segment_thickness_dict_new[id] = Polygon(vertices=vertices_new, middle_segment=middle_segment_new)
+        segment_thickness_dict_new[id] = Polygon(vertices=vertices_new, middle_segment=middle_segment_new, neighbors=segment.neighbors)
 
     return segment_thickness_dict_new
 
