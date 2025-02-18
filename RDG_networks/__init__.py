@@ -14,7 +14,7 @@ from .thickness.orientate_network import translate_network
 from .thickness.orientate_network import clip_network
 from .thickness.orientate_network import rotate_network
 from .thickness.orientate_network import get_alignment_mean
-from .save_to_stl import save_to_stl
+from .save_data import save_to_stl, save_to_json, load_from_json
 
 __all__ = ['generate_line_segments', 
            'generate_line_segments_thickness',
@@ -33,5 +33,7 @@ __all__ = ['generate_line_segments',
            'Line', 
            'LineSegment', 
            'Polygon',
-           'save_to_stl'
+           'save_to_stl',
+           'save_to_json',
+           'load_from_json'
            ]

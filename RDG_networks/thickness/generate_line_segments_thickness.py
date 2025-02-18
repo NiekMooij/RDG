@@ -642,8 +642,6 @@ def generate_line_segments_thickness(
                  'polygon_arr': polygon_arr, 
                  'segment_thickness_dict': segment_thickness_dict, 
                  'jammed': jammed,
-                 'nucleation_points': nucleation_point,
-                 'nucleation_angles': angles,
                  'generated_config': generated_config}
     
     return data_dict
